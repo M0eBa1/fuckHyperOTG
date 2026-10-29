@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FuckHyperOTG</string>
+    <string name="xposed_description">解除小米澎湃系统(HyperOS)OTG自动关闭限制，实现常驻OTG供电与数据连接</string>
+    <string name="tile_otg_name">常驻OTG</string>
+
+    <string name="status_activated">模块已激活</string>
+    <string name="status_not_activated">模块未在 LSPosed 中激活</string>
+    <string name="status_desc_activated">FuckHyperOTG 正在生效中，OTG 自动断开已被拦截</string>
+    <string name="status_desc_not_activated">请在 LSPosed 管理器中勾选本模块与相应作用域，并重启设备生效</string>
+
+    <string name="pref_category_features">核心功能设置</string>
+    <string name="pref_prevent_timeout_title">阻止 10 分钟自动关闭</string>
+    <string name="pref_prevent_timeout_summary">拦截 HyperOS 的空闲定时器，外接声卡/小尾巴/手柄/硬盘不再因无频繁数据交互被关断</string>
+
+    <string name="pref_force_show_switch_title">设置中强制显示 OTG 开关</string>
+    <string name="pref_force_show_switch_summary">在系统“设置 -> 更多设置”中强制显示 OTG 开关，解除部分机型隐藏开关或插线置灰的限制</string>
+
+    <string name="pref_keep_host_power_title">保持 USB Host 供电常开</string>
+    <string name="pref_keep_host_power_summary">阻止系统切断 Type-C 接口 VBUS 供电，支持持续供电设备与外设长效待命</string>
+
+    <string name="pref_category_quick_actions">快捷功能</string>
+    <string name="btn_open_system_otg">打开系统 OTG 设置</string>
+    <string name="btn_root_force_otg">Root: 底层强制拉高 OTG 供电节点</string>
+
+    <string name="toast_root_success">Root 命令执行成功：已强制开启 OTG</string>
+    <string name="toast_root_failed">执行失败：请检查是否已授权 Root 权限</string>
+
+    <string name="scope_settings">系统设置 (com.android.settings)</string>
+    <string name="scope_system_framework">系统框架 (android)</string>
+    <string name="scope_system_ui">系统界面 (com.android.systemui)</string>
+</resources>

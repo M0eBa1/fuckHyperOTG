@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">FuckHyperOTG</string>
+    <string name="xposed_description">Keep Xiaomi HyperOS USB OTG permanently active and prevent the 10-minute timeout auto-shutdown.</string>
+    <string name="tile_otg_name">Always OTG</string>
+
+    <string name="status_activated">Module Activated</string>
+    <string name="status_not_activated">Module Not Activated in LSPosed</string>
+    <string name="status_desc_activated">FuckHyperOTG is active and protecting OTG connections.</string>
+    <string name="status_desc_not_activated">Please enable FuckHyperOTG in LSPosed manager and reboot your device.</string>
+
+    <string name="pref_category_features">Core Features</string>
+    <string name="pref_prevent_timeout_title">Prevent 10-Min Timeout</string>
+    <string name="pref_prevent_timeout_summary">Bypass HyperOS aggressive 10-minute auto-disable when no heavy data transfer is detected.</string>
+
+    <string name="pref_force_show_switch_title">Force Show OTG Switch</string>
+    <string name="pref_force_show_switch_summary">Force display the OTG toggle switch in Settings -> Additional settings on all HyperOS devices.</string>
+
+    <string name="pref_keep_host_power_title">Keep USB Host Power Alive</string>
+    <string name="pref_keep_host_power_summary">Prevent kernel from collapsing USB host VBUS power when peripherals are idle (e.g. DAC, Gamepad, SSD).</string>
+
+    <string name="pref_category_quick_actions">Quick Actions</string>
+    <string name="btn_open_system_otg">Open System OTG Settings</string>
+    <string name="btn_root_force_otg">Root: Force Enable OTG Node</string>
+
+    <string name="toast_root_success">Root command executed: OTG forced on</string>
+    <string name="toast_root_failed">Failed to execute root command: No root access</string>
+
+    <string name="scope_settings">System Settings</string>
+    <string name="scope_system_framework">System Framework</string>
+    <string name="scope_system_ui">System UI</string>
+
+    <string-array name="xposed_scope">
+        <item>com.android.settings</item>
+        <item>android</item>
+        <item>com.android.systemui</item>
+        <item>com.fuckhyperotg</item>
+    </string-array>
+</resources>
