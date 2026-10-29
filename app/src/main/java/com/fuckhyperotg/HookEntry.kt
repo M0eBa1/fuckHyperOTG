@@ -12,7 +12,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 class HookEntry : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
-    override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {
+    override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam?) {
         XposedUtils.log("FuckHyperOTG Zygote initialized")
     }
 

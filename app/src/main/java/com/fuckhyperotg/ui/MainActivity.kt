@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
      * Hooked by HookEntry when the Xposed module is active.
      * Returns false by default if not hooked.
      */
-    private fun isModuleActivated(): Boolean {
+    fun isModuleActivated(): Boolean {
         return false
     }
 
