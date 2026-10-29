@@ -13,7 +13,7 @@ on:
         description: 'Create a GitHub Release with APK assets'
         required: false
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: write
@@ -66,10 +66,12 @@ jobs:
           path: artifacts/*release*.apk
           if-no-files-found: warn
 
-      - name: Create GitHub Release
-        if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.create_release)
+      - name: Create or Update GitHub Release
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || 'v1.0.0' }}
+          name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || 'FuckHyperOTG v1.0.0' }}
           files: artifacts/*.apk
           generate_release_notes: true
           draft: false
